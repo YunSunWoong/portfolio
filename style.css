@@ -96,12 +96,20 @@ h1 {
 
   /* Navbar */
   #navbar{
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-main);
+    background-color: transparent;
     align-items: center;
     color: var(--color-white);
     padding: 16px;
+    transition: all var(--anmimation-duration) ease-in-out;
+  }
+
+  #navbar.navbar--dark{
+    background-color: var(--color-main);
+    padding: 8px;
   }
 
   .navbar__menu{
@@ -120,9 +128,9 @@ h1 {
     border-radius: var(--size-border-radius);
   }
 
-  /* .navbar__menu__item.active{
+  .navbar__menu__item.active{
     border: 1px solid var(--color-white);
-  } */
+  }
 
   .navbar__menu__item:hover{
     background-color: var(--color-navbtn);
@@ -143,6 +151,7 @@ h1 {
 #home{
   background: url("img/home\ background.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
